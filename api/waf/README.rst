@@ -64,3 +64,4 @@ APIの利用
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X DELETE
+
