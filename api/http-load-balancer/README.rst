@@ -18,19 +18,21 @@ APIの利用
 
   $ git clone https://github.com/BeF5/f5j-dc-waap-automation
   $ cd api/http-load-balancer
-  
+
 - オブジェクトの作成
 
 .. code-block:: bash
   :linenos:
   :caption: APIによるオブジェクトの作成
 
+  # Originl Pool の作成
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/origin_pools \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X POST \
        -d @base-origin-pool.json
 
+  # HTTP LB の作成
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/http_loadbalancers \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
@@ -44,11 +46,13 @@ APIの利用
   :linenos:
   :caption: APIによるオブジェクトの削除
 
+  # HTTP LB の削除
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/http_loadbalancers/**httplb_name** \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X DELETE
   
+  # Origin Pool の削除
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/origin_pools/**op_name** \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \

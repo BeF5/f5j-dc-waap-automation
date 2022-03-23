@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "name": "**waf_name**",
+    "namespace": "**myns**",
+    "labels": {},
+    "annotations": {},
+    "description": "",
+    "disable": false
+  },
+  "spec": {
+    "blocking": {},
+    "detection_settings": {
+      "signature_selection_setting": {
+        "default_attack_type_settings": {},
+        "high_medium_accuracy_signatures": {}
+      },
+      "enable_suppression": {},
+      "enable_threat_campaigns": {},
+      "default_violation_settings": {}
+    },
+    "bot_protection_setting": {
+      "malicious_bot_action": "BLOCK",
+      "suspicious_bot_action": "REPORT",
+      "good_bot_action": "REPORT"
+    },
+    "allowed_response_codes": {
+      "response_code": [
+        200
+      ]
+    },
+    "custom_anonymization": {
+      "anonymization_config": [
+        {
+          "query_parameter": {
+            "query_param_name": "mypass"
+          }
+        }
+      ]
+    },
+    "blocking_page": {
+      "blocking_page": "string:///PGh0bWw+PGhlYWQ+PHRpdGxlPlJlcXVlc3QgUmVqZWN0ZWQgQ3VzdG9tIFBhZ2U8L3RpdGxlPjwvaGVhZD48Ym9keT5UaGUgcmVxdWVzdGVkIFVSTCB3YXMgcmVqZWN0ZWQuIFBsZWFzZSBjb25zdWx0IHdpdGggeW91ciBhZG1pbmlzdHJhdG9yLjxici8+PGJyLz5Zb3VyIHN1cHBvcnQgSUQgaXM6IHt7cmVxdWVzdF9pZH19PGJyLz48YnIvPjxhIGhyZWY9ImphdmFzY3JpcHQ6aGlzdG9yeS5iYWNrKCkiPltHbyBCYWNrXTwvYT48L2JvZHk+PC9odG1sPg=="
+    }
+  }
+}

@@ -27,12 +27,14 @@ APIの利用
   :linenos:
   :caption: APIによるオブジェクトの作成 (HTTP Load Balancer の Origin Pool 設定ファイルを指定)
 
+  # Originl Pool の作成 (HTTP LoadBalancer のパラメータを指定)
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/origin_pools \
        --cert **/path/to/api_credential.p12-file**:**password** \
        --cert-type P12 \
        -X POST \
        -d @../http-load-balancer/base-origin-pool.json
 
+  # HTTP LB の作成
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/http_loadbalancers \
        --cert **/path/to/api_credential.p12-file**:**password** \
        --cert-type P12 \
@@ -46,11 +48,13 @@ APIの利用
   :linenos:
   :caption: APIによるオブジェクトの削除
 
+  # HTTP LB の削除
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/http_loadbalancers/**httplb_name** \
        --cert **/path/to/api_credential.p12-file**:**password** \
        --cert-type P12 \
        -X DELETE
-  
+
+  # Origin Pool の削除
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/origin_pools/**op_name** \
        --cert **/path/to/api_credential.p12-file**:**password** \
        --cert-type P12 \
