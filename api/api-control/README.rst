@@ -36,7 +36,7 @@ APIの利用
        -d @../http-load-balancer/base-origin-pool.json
 
   # Service Policy の作成
-  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/service_policys \
+  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/service_policies \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X POST \
@@ -63,7 +63,7 @@ APIの利用
        -X DELETE
 
   # APP Firewall の削除
-  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/app_firewalls \
+  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/service_policies/  \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X DELETE

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "name": "demo-app-service-policy-t",
+    "name": "demo-app-service-policy",
     "namespace": "**myns**",
     "labels": {},
     "annotations": {},
@@ -15,19 +15,19 @@
         "kind": "service_policy_rule",
         "tenant": "**mytenant**",
         "namespace": "**myns**",
-        "name": "ves-io-service-policy-demo-app-service-policy-t-demo-app-sp-rule1"
+        "name": "ves-io-service-policy-demo-app-service-policy-demo-app-sp-rule1"
       },
       {
         "kind": "service_policy_rule",
         "tenant": "**mytenant**",
         "namespace": "**myns**",
-        "name": "ves-io-service-policy-demo-app-service-policy-t-demo-app-sp-rule2"
+        "name": "ves-io-service-policy-demo-app-service-policy-demo-app-sp-rule2"
       },
       {
         "kind": "service_policy_rule",
         "tenant": "**mytenant**",
         "namespace": "**myns**",
-        "name": "ves-io-service-policy-demo-app-service-policy-t-demo-app-sp-rule3"
+        "name": "ves-io-service-policy-demo-app-service-policy-demo-app-sp-rule3"
       }
     ],
     "rule_list": {
