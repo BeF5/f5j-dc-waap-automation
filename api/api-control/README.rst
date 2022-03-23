@@ -1,10 +1,11 @@
 パラメータの指定
 ----
 
-``app-fw.json`` と ``waf-httplb.json`` をAPIの値として指定します。
+``api-control-httplb.json`` をAPIの値として指定します。
 ``**<変数名>**`` が環境に合わせて変更するパラメータとなります。適切な内容に変更してください。
 
-``Originl Pool Object`` は HTTP Load Balancer の Originl Pool 作成手順に従って作成ください
+| ``Originl Pool Object`` は HTTP Load Balancer の Originl Pool 作成手順に従って作成ください。
+| ``App Firewall Object`` は WAF の App Firewall 作成手順に従って作成してください
 
 APIの利用
 ----
@@ -19,7 +20,7 @@ APIの利用
   :caption: APIによるオブジェクトの作成
 
   $ git clone https://github.com/BeF5/f5j-dc-waap-automation
-  $ cd api/waf
+  $ cd api/api-control
   
 - オブジェクトの作成
 
@@ -34,19 +35,19 @@ APIの利用
        -X POST \
        -d @../http-load-balancer/base-origin-pool.json
 
-  # APP Firewall の作成
-  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/app_firewalls \
-       --cert **/path/to/api_credential.p12-file**:**password** \
+  # Service Policy の作成
+  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/service_policys \
+       --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X POST \
-       -d @app-fw.json
+       -d @api-control-service-policy.json
 
   # HTTP LB の作成
   $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/http_loadbalancers \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X POST \
-       -d @waf-httplb.json
+       -d @api-control-httplb.json
 
 
 - オブジェクトの削除

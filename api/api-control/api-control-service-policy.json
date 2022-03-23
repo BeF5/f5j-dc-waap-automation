@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "name": "demo-app-service-policy-t",
+    "namespace": "**myns**",
+    "labels": {},
+    "annotations": {},
+    "description": "",
+    "disable": false
+  },
+  "spec": {
+    "algo": "FIRST_MATCH",
+    "any_server": {},
+    "rules": [
+      {
+        "kind": "service_policy_rule",
+        "tenant": "**mytenant**",
+        "namespace": "**myns**",
+        "name": "ves-io-service-policy-demo-app-service-policy-t-demo-app-sp-rule1"
+      },
+      {
+        "kind": "service_policy_rule",
+        "tenant": "**mytenant**",
+        "namespace": "**myns**",
+        "name": "ves-io-service-policy-demo-app-service-policy-t-demo-app-sp-rule2"
+      },
+      {
+        "kind": "service_policy_rule",
+        "tenant": "**mytenant**",
+        "namespace": "**myns**",
+        "name": "ves-io-service-policy-demo-app-service-policy-t-demo-app-sp-rule3"
+      }
+    ],
+    "rule_list": {
+      "rules": [
+        {
+          "metadata": {
+            "name": "demo-app-sp-rule1",
+            "description": "",
+            "disable": false
+          },
+          "spec": {
+            "action": "ALLOW",
+            "any_client": {},
+            "headers": [],
+            "query_params": [],
+            "any_ip": {},
+            "any_asn": {},
+            "api_group_matcher": {
+              "match": [
+                "ves-io-api-def-demo-app-api-definition-all-operations"
+              ],
+              "invert_matcher": false
+            },
+            "expiration_timestamp": null,
+            "arg_matchers": [],
+            "cookie_matchers": [],
+            "waf_action": {
+              "none": {}
+            },
+            "rate_limiter": [],
+            "forwarding_class": [],
+            "scheme": [],
+            "challenge_action": "DEFAULT_CHALLENGE",
+            "goto_policy": []
+          }
+        },
+        {
+          "metadata": {
+            "name": "demo-app-sp-rule2",
+            "description": "",
+            "disable": false
+          },
+          "spec": {
+            "action": "DENY",
+            "any_client": {},
+            "headers": [],
+            "query_params": [],
+            "any_ip": {},
+            "any_asn": {},
+            "api_group_matcher": {
+              "match": [
+                "ves-io-api-def-demo-app-api-definition-base-urls"
+              ],
+              "invert_matcher": false
+            },
+            "expiration_timestamp": null,
+            "arg_matchers": [],
+            "cookie_matchers": [],
+            "waf_action": {
+              "none": {}
+            },
+            "rate_limiter": [],
+            "forwarding_class": [],
+            "scheme": [],
+            "challenge_action": "DEFAULT_CHALLENGE",
+            "goto_policy": []
+          }
+        },
+        {
+          "metadata": {
+            "name": "demo-app-sp-rule3",
+            "description": "",
+            "disable": false
+          },
+          "spec": {
+            "action": "ALLOW",
+            "any_client": {},
+            "headers": [],
+            "query_params": [],
+            "any_ip": {},
+            "any_asn": {},
+            "expiration_timestamp": null,
+            "arg_matchers": [],
+            "cookie_matchers": [],
+            "waf_action": {
+              "none": {}
+            },
+            "rate_limiter": [],
+            "forwarding_class": [],
+            "scheme": [],
+            "challenge_action": "DEFAULT_CHALLENGE",
+            "goto_policy": []
+          }
+        }
+      ]
+    },
+    "simple_rules": []
+  }
+}
