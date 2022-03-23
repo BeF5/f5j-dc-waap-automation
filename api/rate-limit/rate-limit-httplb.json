@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "name": "**httplb_name**",
+    "namespace": "**myns**",
+    "labels": {},
+    "annotations": {},
+    "description": "",
+    "disable": false
+  },
+  "spec": {
+    "domains": [
+      "**mydomain**"
+    ],
+    "https": {
+      "http_redirect": false,
+      "add_hsts": false,
+      "tls_parameters": {
+        "tls_certificates": [
+          {
+            "certificate_url": "string///**base 64 encode SSL Certificate**",
+            "private_key": {
+              "clear_secret_info": {
+                "url": "string///**base 64 encode SSL Private Key**",
+                "provider": ""
+              },
+              "secret_encoding_type": "EncodingNone"
+            },
+            "description": ""
+          }
+        ],
+        "no_mtls": {}
+      },
+      "enable_path_normalize": {}
+    },
+    "downstream_tls_certificate_expiration_timestamps": [
+      {}
+    ],
+    "advertise_on_public_default_vip": {},
+    "default_route_pools": [
+      {
+        "pool": {
+          "tenant": "**mytenant**",
+          "namespace": "**myns**",
+          "name": "**op_name**"
+        },
+        "weight": 0,
+        "priority": 0,
+        "endpoint_subsets": {}
+      }
+    ],
+    "routes": [],
+    "disable_waf": {},
+    "add_location": false,
+    "no_challenge": {},
+    "user_id_client_ip": {},
+    "rate_limit": {
+      "rate_limiter": {
+        "total_number": 1,
+        "unit": "SECOND",
+        "burst_multiplier": 1
+      },
+      "no_ip_allowed_list": {},
+      "no_policies": {}
+    },
+    "waf_exclusion_rules": [],
+    "data_guard_rules": [],
+    "blocked_clients": [],
+    "trusted_clients": [],
+    "ddos_mitigation_rules": [],
+    "service_policies_from_namespace": {},
+    "round_robin": {},
+    "multi_lb_app": {},
+    "auto_cert_state": "AutoCertDisabled",
+    "auto_cert_info": {
+      "auto_cert_state": "AutoCertDisabled",
+      "auto_cert_expiry": null,
+      "auto_cert_subject": "",
+      "auto_cert_issuer": "",
+      "dns_records": []
+    }
+  }
+}
