@@ -1,7 +1,7 @@
 パラメータの指定
 ----
 
-``rate-limit-httplb.json`` をAPIの値として指定します。
+``api-discovery-httplb.json`` をAPIの値として指定します。
 ``**<変数名>**`` が環境に合わせて変更するパラメータとなります。適切な内容に変更してください。
 
 ``Originl Pool Object`` は HTTP Load Balancer の Originl Pool 作成手順に従って作成ください
@@ -19,7 +19,7 @@ APIの利用
   :caption: APIによるオブジェクトの作成
 
   $ git clone https://github.com/BeF5/f5j-dc-waap-automation
-  $ cd api/rate-limit
+  $ cd api/api-discovery
 
 - オブジェクトの作成
 
@@ -37,7 +37,7 @@ APIの利用
        --cert **/path/to/api_credential.p12-file**:**password** \
        --cert-type P12 \
        -X POST \
-       -d @rate-limit-httplb.json
+       -d @api-discovery-httplb.json
 
 
 - オブジェクトの削除
