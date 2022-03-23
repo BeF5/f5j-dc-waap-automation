@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "name": "**op_name**",
+    "namespace": "**myns**",
+    "labels": {},
+    "annotations": {},
+    "description": "",
+    "disable": false
+  },
+  "spec": {
+    "origin_servers": [
+      {
+        "public_name": {
+          "dns_name": "**server_name1**"
+        },
+        "labels": {}
+      },
+      {
+        "public_name": {
+          "dns_name": "**server_name2**"
+        },
+        "labels": {}
+      }
+    ],
+    "no_tls": {},
+    "port": **pool_port**,
+    "healthcheck": [],
+    "loadbalancer_algorithm": "LB_OVERRIDE",
+    "endpoint_selection": "LOCAL_PREFERRED"
+  }
+}
