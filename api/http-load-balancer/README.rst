@@ -17,7 +17,7 @@ APIの利用
   :caption: APIによるオブジェクトの作成
 
   $ git clone https://github.com/BeF5/f5j-dc-waap-automation
-  $ cd api/http-load-balancer
+  $ cd f5j-dc-waap-automation/api/http-load-balancer
 
 - オブジェクトの作成
 

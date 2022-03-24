@@ -19,7 +19,7 @@ APIの利用
   :caption: APIによるオブジェクトの作成
 
   $ git clone https://github.com/BeF5/f5j-dc-waap-automation
-  $ cd api/rate-limit
+  $ cd f5j-dc-waap-automation/api/rate-limit
 
 - オブジェクトの作成
 

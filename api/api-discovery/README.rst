@@ -19,7 +19,7 @@ APIの利用
   :caption: APIによるオブジェクトの作成
 
   $ git clone https://github.com/BeF5/f5j-dc-waap-automation
-  $ cd api/api-discovery
+  $ cd f5j-dc-waap-automation/api/api-discovery
 
 - オブジェクトの作成
 
