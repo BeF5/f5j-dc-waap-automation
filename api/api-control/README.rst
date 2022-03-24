@@ -62,8 +62,8 @@ APIの利用
        --cert-type P12 \
        -X DELETE
 
-  # APP Firewall の削除
-  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/service_policies/  \
+  # Service Policy の削除
+  $ curl -k https://**tenant_name**.console.ves.volterra.io/api/config/namespaces/**namespace**/service_policies/**sp_name**  \
        --cert **/path/to/api_credential.p12-file** \
        --cert-type P12 \
        -X DELETE
