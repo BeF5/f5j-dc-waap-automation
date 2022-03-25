@@ -127,6 +127,12 @@ resource "volterra_http_loadbalancer" "example" {
       namespace = var.myns
     }
   }
+  api_definitions {
+    api_definitions {
+        namespace = var.myns
+        name      = "demo-app-api-definition"
+    }
+  }
   // For http load balancer. Please delete https block and eliminate comment out here.
   //http {
   //  dns_volterra_managed = false

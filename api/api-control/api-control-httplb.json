@@ -70,6 +70,15 @@
     },      
     "round_robin": {},
     "multi_lb_app": {},
+    "api_definitions": {
+      "api_definitions": [
+        {
+          "tenant": "**mytenant**",
+          "namespace": "**myns**",
+          "name": "demo-app-api-definition"
+        }
+      ]
+    },
     "auto_cert_state": "AutoCertDisabled",
     "auto_cert_info": {
       "auto_cert_state": "AutoCertDisabled",
